@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import './index.css';
 
-function App() {
+
+
+const App = () => {
+  const [numbers,setNumbers]=useState(0);
+  const increment=()=>{
+   setNumbers(numbers+2);
+  
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container my-5">
+      <div className="text-center">
+        <h1 class="text-light">{numbers}</h1>
+        <button class="btn btn-warning btn-lg"
+          onClick={increment}>Click me</button>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
